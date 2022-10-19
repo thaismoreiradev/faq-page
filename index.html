@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>FAQ</title>
 </head>
+
 <body>
     <!-- container -->
     <div class="bg-red-200">
@@ -22,47 +24,47 @@
             <!-- question container -->
             <div>
 
-            <!-- first question -->
-           
+                <!-- first question -->
+
                 <!-- single question -->
-                <article>
+                <article class="question">
                     <div class="bg-blue-200">
-                        <p>sssssssss</p>
+                        <p>question 1</p>
                         <button type="button" id="btn">
-                            <!-- plus button -->
-                            <span id="plus-btn">
-                                <i class="far fa-plus-square"></i>
+                            <!-- plus minus button -->
+                            <span>
+                                <i class="far fa-plus-square" id="plus-minus-btn"></i>
                             </span>
                             <!-- minus button -->
-                            <span id="minus-btn" class="hidden">
-                                <i class="far fa-minus-square"></i>
-                            </span>
+                            <!-- <span class="hidden">
+                                <i class="far fa-minus-square" id="minus-btn"></i>
+                            </span> -->
                         </button>
                     </div>
                     <!-- question answer -->
-                    <div class="hidden bg-blue-100">
+                    <div id="answer" class="hidden bg-blue-100">
                         <p>answer answeransweransweransweransweransweransweranswer</p>
                     </div>
                 </article>
 
                 <!-- second question -->
 
-                <article>
+                <article class="question">
                     <div class="bg-blue-200">
-                        <p>sssssssss</p>
+                        <p>question 2</p>
                         <button type="button" id="btn">
-                            <!-- plus button -->
+                            <!-- plus minus button -->
                             <span>
-                                <i class="far fa-plus-square"></i>
+                                <i class="far fa-plus-square" id="plus-minus-btn"></i>
                             </span>
                             <!-- minus button -->
-                            <span class="hidden">
-                                <i class="far fa-minus-square"></i>
-                            </span>
+                            <!-- <span class="hidden">
+                                    <i class="far fa-minus-square" id="minus-btn"></i>
+                                 </span> -->
                         </button>
                     </div>
                     <!-- question answer -->
-                    <div class="hidden bg-blue-100">
+                    <div id="answer" class="hidden bg-blue-100">
                         <p>answer answeransweransweransweransweransweransweranswer</p>
                     </div>
                 </article>
@@ -79,4 +81,5 @@
     </div>
     <script src="./app.js"></script>
 </body>
+
 </html>
