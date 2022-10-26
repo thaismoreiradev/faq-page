@@ -13,22 +13,20 @@
 
 <body>
     <!-- container -->
-    <div class="bg-red-200">
+    <div class="bg-red-200 w-screen h-screen max-w-[600px] max-h-[750px] mx-auto flex flex-col items-center pt-8 gap-2 relative">
         <!-- tile -->
-        <header class="bg-red-400">
-            <h2>FAQ</h2>
+        <header class="bg-red-400 w-full flex flex-col items-center">
+            <h2 class="font-mono text-4xl">FAQ</h2>
             <h6>Frequently Asked Questions</h6>
         </header>
-        <!-- questions -->
-        <main>
-            <!-- question container -->
-            <div>
-
+        <!-- questions container -->
+        <main class="w-full flex flex-col gap-2 px-14">
+            
                 <!-- first question -->
 
                 <!-- single question -->
-                <article class="question" id="question1">
-                    <div class="bg-blue-200">
+                <article class="question flex flex-col" id="question1">
+                    <div class="bg-blue-200 flex justify-between p-2 rounded-lg" id="question-rounded-1">
                         <p>question 1</p>
                         <button type="button" id="btn">
                             <!-- plus minus button -->
@@ -38,15 +36,15 @@
                         </button>
                     </div>
                     <!-- question answer -->
-                    <div id="answer" class="answer-question-1 hidden bg-blue-100">
+                    <div id="answer" class="answer-question-1 hidden bg-blue-100 p-2 break-all rounded-b-lg">
                         <p>answer answeransweransweransweransweransweransweranswer</p>
                     </div>
                 </article>
 
                 <!-- second question -->
 
-                <article class="question" id="question2">
-                    <div class="bg-blue-200">
+                <article class="question flex flex-col" id="question2">
+                    <div class="bg-blue-200 flex justify-between p-2 rounded-lg" id="question-rounded-2">
                         <p>question 2</p>
                         <button type="button" id="btn">
                             <!-- plus minus button -->
@@ -56,7 +54,7 @@
                         </button>
                     </div>
                     <!-- question answer -->
-                    <div id="answer" class="answer-question-2 hidden bg-blue-100">
+                    <div id="answer" class="answer-question-2 hidden bg-blue-100 p-2 break-all rounded-b-lg">
                         <p>answer answeransweransweransweransweransweransweranswer</p>
                     </div>
                 </article>
@@ -64,8 +62,8 @@
 
                 <!-- third question -->
 
-                <article class="question" id="question3">
-                    <div class="bg-blue-200">
+                <article class="question flex flex-col" id="question3">
+                    <div class="bg-blue-200 flex justify-between p-2 rounded-lg" id="question-rounded-3">
                         <p>question 3</p>
                         <button type="button" id="btn">
                             <!-- plus minus button -->
@@ -75,14 +73,14 @@
                         </button>
                     </div>
                     <!-- question answer -->
-                    <div id="answer" class="answer-question-3 hidden bg-blue-100">
+                    <div id="answer" class="answer-question-3 hidden bg-blue-100 p-2 break-all rounded-b-lg">
                         <p>answer answeransweransweransweransweransweransweranswer</p>
                     </div>
                 </article>
 
-            </div>
+            
         </main>
-        <footer>
+        <footer class="bg-blue-400 absolute bottom-0 pb-1 text-xs">
             <p>Developed by
                 <a href="https://github.com/thaismoreiradev" target="_blank" rel="noopener noreferrer">Thais
                     Moreira
