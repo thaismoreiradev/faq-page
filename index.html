@@ -16,21 +16,20 @@
 
 <body class="bg-violet-200">
     <!-- container -->
-    <div class="bg-violet-200 xs:text-lg w-screen h-screen max-w-[600px] max-h-[750px] mx-auto flex flex-col items-center pt-8 xs:pt-14 gap-5 xs:gap-8 justify-between">
+    <div
+        class="bg-violet-200 xs:text-lg w-screen h-screen max-w-[600px] max-h-[750px] mx-auto flex flex-col items-center pt-8 xs:pt-14 gap-5 xs:gap-8 justify-between">
         <!-- title -->
         <div class="w-full">
-        <header class=" w-full flex flex-col items-center gap-2 pb-3">
-            <h2 class="text-violet-800 font-anton text-5xl">F A Q</h2>
-            <h6>Frequently Asked Questions</h6>
-        </header>
-        <!-- questions container -->
-        <main class="w-full flex flex-col items-center justify-center gap-3 xs:gap-4 text-xs bg-red-200">
-            
-                <!-- first question -->
+            <header class=" w-full flex flex-col items-center gap-2 pb-3">
+                <h1 class="text-violet-800 font-anton text-5xl">F A Q</h1>
+                <p>Frequently Asked Questions</p>
+            </header>
+            <!-- questions container -->
+            <main class="w-full flex flex-col items-center justify-center gap-3 xs:gap-4 text-xs xs:text-base">
 
-                <!-- single question -->
-                <article class="question flex flex-col" id="question1">
-                    <div class="bg-violet-800 text-white flex justify-between p-2 rounded-lg" id="question-rounded-1">
+                <!-- first question -->
+                <article class="w-3/4 question flex flex-col" id="question1">
+                    <div class="bg-violet-800 text-white flex justify-between p-2 rounded-t-lg rounded-b-lg" id="question-rounded-1">
                         <p>When will I receive my order?</p>
                         <button type="button" id="btn">
                             <!-- plus minus button -->
@@ -41,15 +40,15 @@
                     </div>
                     <!-- question answer -->
                     <div id="answer" class="answer-question-1 hidden bg-white p-2 break-all rounded-b-lg">
-                        <p>To track your order, click here and enter your order number and billing zip code. You will then be able to see all of
-                        your order and shipping info.</p>
+                        <p>To track your order, click here and enter your order number and billing zip code. You will
+                            then be able to see all of
+                            your order and shipping info.</p>
                     </div>
                 </article>
 
                 <!-- second question -->
-
-                <article class="question flex flex-col" id="question2">
-                    <div class="bg-violet-800 text-white flex justify-between p-2 rounded-lg" id="question-rounded-2">
+                <article class="w-3/4 question flex flex-col" id="question2">
+                    <div class="bg-violet-800 text-white flex justify-between p-2 rounded-t-lg rounded-b-lg" id="question-rounded-2">
                         <p>What is your return policy?</p>
                         <button type="button" id="btn">
                             <!-- plus minus button -->
@@ -60,16 +59,16 @@
                     </div>
                     <!-- question answer -->
                     <div id="answer" class="answer-question-2 hidden bg-white p-2 break-all rounded-b-lg">
-                        <p>Return or exchange any unused or defective merchandise by mail or at one of our US or Canada store locations. Returns
-                        made within 30 days of the order delivery date will be issued refund to the original form of payment.</p>
+                        <p>Return or exchange any unused or defective merchandise by mail or at one of our US or Canada
+                            store locations. Returns
+                            made within 30 days of the order delivery date will be issued refund to the original form of
+                            payment.</p>
                     </div>
                 </article>
 
-
                 <!-- third question -->
-
-                <article class="question flex flex-col" id="question3">
-                    <div class="bg-violet-800 text-white flex justify-between p-2 rounded-lg" id="question-rounded-3">
+                <article class="w-3/4 question flex flex-col" id="question3">
+                    <div class="bg-violet-800 text-white flex justify-between p-2 rounded-t-lg rounded-b-lg" id="question-rounded-3">
                         <p>Can I change my order?</p>
                         <button type="button" id="btn">
                             <!-- plus minus button -->
@@ -80,14 +79,14 @@
                     </div>
                     <!-- question answer -->
                     <div id="answer" class="answer-question-3 hidden bg-white p-2 break-all rounded-b-lg">
-                        <p>We start working on your order as soon as we get it, so we are unable to make any changes or modifications to an order
-                        after it has been placed and confirmed. However, there is a short window of time in which you can cancel your order.
-                        Visit our Cancellation Policy page for more info.</p>
+                        <p>We start working on your order as soon as we get it, so we are unable to make any changes or
+                            modifications to an order
+                            after it has been placed and confirmed. However, there is a short window of time in which
+                            you can cancel your order.
+                            Visit our Cancellation Policy page for more info.</p>
                     </div>
                 </article>
-
-            
-        </main>
+            </main>
         </div>
         <footer class="pb-1 text-xs text-violet-800">
             <p>Developed by
@@ -99,5 +98,4 @@
     </div>
     <script src="./app.js"></script>
 </body>
-
 </html>

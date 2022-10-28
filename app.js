@@ -13,18 +13,42 @@ let openQuestionTwo = false;
 let openQuestionThree = false;
 
 
+// rule for change the border for rounded or not
+const gettingRounded = (id) => {
+    if(id === "question1" && openQuestionOne === false){
+        
+        questionOneRounded.classList.remove("rounded-b-lg")
+        questionTwoRounded.classList.add("rounded-b-lg")
+        questionThreeRounded.classList.add("rounded-b-lg")
 
+    }else if(id === "question1" && openQuestionOne === true){
+        questionOneRounded.classList.add("rounded-b-lg")
+    }
 
+    if(id === "question2" && openQuestionTwo === false){
+        questionTwoRounded.classList.remove("rounded-b-lg")
+        questionOneRounded.classList.add("rounded-b-lg")
+        questionThreeRounded.classList.add("rounded-b-lg")
+    }else if(id === "question2" && openQuestionTwo === true){
+        questionTwoRounded.classList.add("rounded-b-lg")
+    }
+
+    if(id === "question3" && openQuestionThree === false){
+        questionThreeRounded.classList.remove("rounded-b-lg")
+        questionOneRounded.classList.add("rounded-b-lg")
+        questionTwoRounded.classList.add("rounded-b-lg")
+    }else if(id === "question3" && openQuestionThree === true){
+        questionThreeRounded.classList.add("rounded-b-lg")
+    }
+}
 
 
 questions.forEach( question => {
     const plusMinusBtn = question.querySelector("#plus-minus-btn");
     const answer = question.querySelector("#answer");
 
-
     question.addEventListener("click", () => {
-      
-        
+              
         const questionId = question.getAttribute("id")
 
         // rules for question one
@@ -33,19 +57,12 @@ questions.forEach( question => {
             plusMinusBtn.classList.remove("fa-plus-square")
             plusMinusBtn.classList.add("fa-minus-square")
             answer.classList.remove("hidden")
+           
+            gettingRounded(questionId)
 
-            // rule for change de border for rounded or not
-            questionOneRounded.classList.remove("rounded-lg")
-            questionOneRounded.classList.add("rounded-t-lg")
             openQuestionOne = true
             openQuestionTwo = false
-            openQuestionThree = false
-
-            questionTwoRounded.classList.remove("rounded-t-lg")
-            questionTwoRounded.classList.add("rounded-lg")
-
-            questionThreeRounded.classList.remove("rounded-t-lg")
-            questionThreeRounded.classList.add("rounded-lg")
+            openQuestionThree = false       
 
             buttonQuestion2.classList.remove("fa-minus-square")
             buttonQuestion2.classList.add("fa-plus-square")
@@ -60,16 +77,12 @@ questions.forEach( question => {
             plusMinusBtn.classList.add("fa-plus-square")
             answer.classList.add("hidden")
 
-            // rule for change de border for rounded or not
-            questionOneRounded.classList.remove("rounded-t-lg")
-            questionOneRounded.classList.add("rounded-lg")
+            gettingRounded(questionId)
 
             openQuestionOne = false
             openQuestionTwo = false
             openQuestionThree = false
-
         }
-
 
         // rules for question two
         if(questionId === "question2" && openQuestionTwo === false){
@@ -77,20 +90,12 @@ questions.forEach( question => {
             plusMinusBtn.classList.remove("fa-plus-square")
             plusMinusBtn.classList.add("fa-minus-square")
             answer.classList.remove("hidden")
+              
+            gettingRounded(questionId)
 
-            // rule for change de border for rounded or not
-            questionTwoRounded.classList.remove("rounded-lg")
-            questionTwoRounded.classList.add("rounded-t-lg")
-               
             openQuestionOne = false
             openQuestionTwo = true
             openQuestionThree = false
-
-            questionOneRounded.classList.remove("rounded-t-lg")
-            questionOneRounded.classList.add("rounded-lg")
-
-            questionThreeRounded.classList.remove("rounded-t-lg")
-            questionThreeRounded.classList.add("rounded-lg")
 
             buttonQuestion1.classList.remove("fa-minus-square")
             buttonQuestion1.classList.add("fa-plus-square")
@@ -100,46 +105,30 @@ questions.forEach( question => {
             buttonQuestion3.classList.add("fa-plus-square")
             answerQuestion3.classList.add("hidden")
 
-
-         
-
         } else if(questionId === "question2" && openQuestionTwo === true){            
             plusMinusBtn.classList.remove("fa-minus-square")
             plusMinusBtn.classList.add("fa-plus-square")
             answer.classList.add("hidden")
 
-            // rule for change de border for rounded or not
-            questionTwoRounded.classList.remove("rounded-t-lg")
-            questionTwoRounded.classList.add("rounded-lg")
+            gettingRounded(questionId)
 
             openQuestionOne = false
             openQuestionTwo = false
             openQuestionThree = false
         }
 
-
-
-
-                // rules for question three
+        // rules for question three
         if(questionId === "question3" && openQuestionThree === false){
             
             plusMinusBtn.classList.remove("fa-plus-square")
             plusMinusBtn.classList.add("fa-minus-square")
             answer.classList.remove("hidden")
 
-            // rule for change de border for rounded or not
-            questionThreeRounded.classList.remove("rounded-lg")
-            questionThreeRounded.classList.add("rounded-t-lg")
+            gettingRounded(questionId)
                
             openQuestionOne = false
             openQuestionTwo = false
             openQuestionThree = true
-
-            questionOneRounded.classList.remove("rounded-t-lg")
-            questionOneRounded.classList.add("rounded-lg")
-
-            questionTwoRounded.classList.remove("rounded-t-lg")
-            questionTwoRounded.classList.add("rounded-lg")
 
             buttonQuestion1.classList.remove("fa-minus-square")
             buttonQuestion1.classList.add("fa-plus-square")
@@ -147,25 +136,19 @@ questions.forEach( question => {
 
             buttonQuestion2.classList.remove("fa-minus-square")
             buttonQuestion2.classList.add("fa-plus-square")
-            answerQuestion2.classList.add("hidden")
-
-
-         
+            answerQuestion2.classList.add("hidden")         
 
         } else if(questionId === "question3" && openQuestionThree === true){            
             plusMinusBtn.classList.remove("fa-minus-square")
             plusMinusBtn.classList.add("fa-plus-square")
             answer.classList.add("hidden")
 
-            // rule for change de border for rounded or not
-            questionThreeRounded.classList.remove("rounded-t-lg")
-            questionThreeRounded.classList.add("rounded-lg")
+            gettingRounded(questionId)
 
             openQuestionOne = false
             openQuestionTwo = false
             openQuestionThree = false
         }
-
     })
 })
 
